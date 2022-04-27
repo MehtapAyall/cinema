@@ -50,7 +50,7 @@ class kullan extends Controller
       $kullani->saat=$req->saat;
       $kullani->save(); 
       
-      return view('koltuk');
+      return back();
 
     }
     public function koltuk (Request $req)
@@ -60,14 +60,18 @@ class kullan extends Controller
 
     public function goster()
     {
-       
        $film=DB::table('films')->get();            
        return view('koltuk',['film'=> $film]);
     }
     public function filmadi($id)
     {
-        $filmadi=film::where('id','=',$id)->get('filmadi');
-        return view('koltuk',$filmadi);
+        /*$filmadi=film::where('id','=',$id)->get('filmadi');
+        $data=film::find($id);
+        return view('koltuk',$filmadi);*/
+        $data = ['filmid'=>film::where('id','=', $id)->first()];
+       
+        
+        return view('koltuk', $data);
     }
 
     public function ekle()

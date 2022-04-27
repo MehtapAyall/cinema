@@ -1,4 +1,14 @@
-<link rel="stylesheet" href="{{ asset('css/a.css') }}" type="text/css">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+
+</html><link rel="stylesheet" href="{{ asset('css/a.css') }}" type="text/css">
 <link rel="stylesheet" href="{{ asset('css/baglanti.css') }}" type="text/css">
 <body class="üst">
 
@@ -18,15 +28,11 @@
 
 <dialog id="koltuksec" style="width:60%; background-color:rgba(255, 255, 255, 0.932); border:1px dotted black; box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.404);border-radius: 8%;"  
 >
-<table class="resim">
-    <form method="">
+<form method="post" action="{{route('musteri')}}">
         @csrf
-    <tr><td><button class="submit" value="09:00" name="salon">1</button></td>
-<td><button class="button">2</button></td>
-<td><button class="button">3</button></td>
-<td><button class="button">4</button></td>
-<td><button class="button">5</button></td>
-</tr></form>
+<table  style="width:60%;">
+    
+   
     
 <tr>
   <th></th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th>
@@ -34,90 +40,85 @@
 
 <tr >
 <td><h1> A</h1></td>
-<td><button class="button" id="a1" height="50px" width="50px" value="a1" name="koltuk">A1</td>
-<td><button class="button" id="a2" height="50px" width="50px" value="a2">A2</td>
-<td><button class="button" id="a3" height="50px" width="50px" value="a3">A3</td>
-<td><button class="button" id="a4" height="50px" width="50px" value="a4">A4</td>
-<td><button class="button" id="a5" height="50px" width="50px" value="a5">A5</td>
-<td><button class="button" id="a6" height="50px" width="50px" value="a6">A6</td>
-<td><button class="button" id="a7" height="50px" width="50px" value="a7">A7</td>
-<td><button class="button" id="a8" height="50px" width="50px" value="a8">A8</td>
-<td><button class="button" id="a9" height="50px" width="50px" value="a9">A9</td>
-<td><button class="button" id="a10" height="50px" width="50px" value="a10">A10</td>
+<td><input class="cek" type="checkbox" id="a1" height="50px" width="50px" value="a1" name="koltuk">A1 </td>
+<td><input class="cek" type="checkbox" id="a2" height="50px" width="50px" value="a2" name="koltuk">A2</td>
+<td><input class="cek" type="checkbox" id="a3" height="50px" width="50px" value="a3" name="koltuk">A3</td>
+<td><input class="cek" type="checkbox" id="a4" height="50px" width="50px" value="a4" name="koltuk">A4</td>
+<td><input class="cek" type="checkbox" id="a5" height="50px" width="50px" value="a5" name="koltuk">A5</td>
+<td><input class="cek" type="checkbox" id="a6" height="50px" width="50px" value="a6" name="koltuk">A6</td>
+<td><input class="cek" type="checkbox" id="a7" height="50px" width="50px" value="a7" name="koltuk">A7</td>
+<td><input class="cek" type="checkbox" id="a8" height="50px" width="50px" value="a8" name="koltuk">A8</td>
+<td><input class="cek" type="checkbox" id="a9" height="50px" width="50px" value="a9" name="koltuk">A9</td>
+<td><input class="cek" type="checkbox" id="a10" height="50px" width="50px" value="a10" name="koltuk">A10</td>
 </tr>
 
 <tr>
-<td><h1> B</h1></td><td><button class="button" id="b1" height="50px" width="50px" select" value="b1" name="koltuk">B1</td>
-<td><button class="button" id="b2" height="50px" width="50px" value="b2" onclick="style="background: black"">B2</td>
-<td><button class="button" id="b3" height="50px" width="50px" value="b3">B3</td>
-<td><button class="button" id="b4" height="50px" width="50px" value="b42">B4</td>
-<td><button class="button" id="b5" height="50px" width="50px" value="b5">B5</td>
-<td><button class="button" id="b6" height="50px" width="50px" value="b6">B6</td>
-<td><button class="button" id="b7" height="50px" width="50px" value="b7">B7</td>
-<td><button class="button" id="b8" height="50px" width="50px" value="b8">B8</td>
-<td><button class="button" id="b9" height="50px" width="50px" value="b9">B9</td>
-<td><button class="button" id="b10" height="50px" width="50px" value="b10">B10</td>
+<td><h1> B</h1></td><td><input class="cek" type="checkbox" id="b1" height="50px" width="50px" select" value="b1" name="koltuk">B1</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="b2" height="50px" width="50px" value="b2" onclick="style="background: black"">B2</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="b3" height="50px" width="50px" value="b3">B3</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="b4" height="50px" width="50px" value="b42">B4</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="b5" height="50px" width="50px" value="b5">B5</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="b6" height="50px" width="50px" value="b6">B6</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="b7" height="50px" width="50px" value="b7">B7</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="b8" height="50px" width="50px" value="b8">B8</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="b9" height="50px" width="50px" value="b9">B9</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="b10" height="50px" width="50px" value="b10">B10</td>
 <tr>
-<td><h1> C</h1></td><td><button class="button" id="c1" height="50px" width="50px" select" value="c1" name="koltuk">C1</td>
-<td><button class="button" id="c2" height="50px" width="50px" value="c2" onclick="style="background: black"">C2</td>
-<td><button class="button" id="c3" height="50px" width="50px" value="c3">C3</td>
-<td><button class="button" id="c4" height="50px" width="50px" value="c4">C4</td>
-<td><button class="button" id="c5" height="50px" width="50px" value="c5">C5</td>
-<td><button class="button" id="c6" height="50px" width="50px" value="c6">C6</td>
-<td><button class="button" id="c7" height="50px" width="50px" value="c7">C7</td>
-<td><button class="button" id="c8" height="50px" width="50px" value="c8">C8</td>
-<td><button class="button" id="c9" height="50px" width="50px" value="c9">C9</td>
-<td><button class="button" id="c10" height="50px" width="50px" value="c10">C10</td>
+<td><h1> C</h1></td><td><input class="cek" type="checkbox" id="c1" height="50px" width="50px" select" value="c1" name="koltuk">C1</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="c2" height="50px" width="50px" value="c2" onclick="style="background: black"">C2</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="c3" height="50px" width="50px" value="c3">C3</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="c4" height="50px" width="50px" value="c4">C4</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="c5" height="50px" width="50px" value="c5">C5</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="c6" height="50px" width="50px" value="c6">C6</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="c7" height="50px" width="50px" value="c7">C7</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="c8" height="50px" width="50px" value="c8">C8</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="c9" height="50px" width="50px" value="c9">C9</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="c10" height="50px" width="50px" value="c10">C10</td>
 </tr>
 <tr>
 
-<td><h1> D</h1></td><td><button class="button" id="d1" height="50px" width="50px" select" value="d1" name="koltuk">D1</td>
-<td><button class="button" id="d2" height="50px" width="50px" value="d2" onclick="style="background: black"">D2</td>
-<td><button class="button" id="d3" height="50px" width="50px" value="d3">D3</td>
-<td><button class="button" id="d4" height="50px" width="50px" value="d4">D4</td>
-<td><button class="button" id="d5" height="50px" width="50px" value="d5">D5</td>
-<td><button class="button" id="d6" height="50px" width="50px" value="d6">D6</td>
-<td><button class="button" id="d7" height="50px" width="50px" value="d7">D7</td>
-<td><button class="button" id="d8" height="50px" width="50px" value="d8">D8</td>
-<td><button class="button" id="d9" height="50px" width="50px" value="d9">D9</td>
-<td><button class="button" id="d10" height="50px" width="50px" value="d10">D10</td>
+<td><h1> D</h1></td><td><input class="cek" type="checkbox" id="d1" height="50px" width="50px" select" value="d1" name="koltuk">D1</td>
+<td><input class="cek" type="checkbox" name="koltuk"  id="d2" height="50px" width="50px" value="d2" onclick="style="background: black"">D2</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="d3" height="50px" width="50px" value="d3">D3</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="d4" height="50px" width="50px" value="d4">D4</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="d5" height="50px" width="50px" value="d5">D5</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="d6" height="50px" width="50px" value="d6">D6</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="d7" height="50px" width="50px" value="d7">D7</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="d8" height="50px" width="50px" value="d8">D8</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="d9" height="50px" width="50px" value="d9">D9</td>
+<td><input class="cek" type="checkbox" name="koltuk" id="d10" height="50px" width="50px" value="d10">D10</td>
 </tr>
 
     <table>
     
-
-         <form action="" method="post" >
-             @csrf
-         <tr><input type="text" placeholder="filmadı" name="filmid"></tr>
-    <tr> <td> salon no: </td><th> <input type="text" name="salon" value=""> </th></tr>
-    <tr> <td >koltuk no: </td><th> <input type="text" name="koltuk" value=""> </th></tr>
-    <tr> <td >saat: </td><th> <input type="text" name="saat" value=""> </th></tr>
-    <tr> <td >ücret: </td><th> <input type="text" name="ucret" value=""> </th></tr>
-    <tr><input type="text" placeholder="e-mail" name="email"></tr>
-        <tr><input type="text" placeholder="ad" name="ad"></tr>
-        <tr><input type="text" placeholder="soyad" name="soyad"></tr>
+   @isset($filmid)
+         
+         <tr><td><input type="text" placeholder="filmadı" name="filmid" value="" ></td></tr>
+         @endisset
+    <tr> <td> <input  placeholder=" salon no"  type="text" name="salon" value=""> </td></tr>
+   
+    <tr> <th> <input placeholder="saat"  type="text" name="saat" value=""> </th></tr>
+    <tr> <th> <input placeholder=ücret type="text" name="ucret" value=""> </th></tr>
+    
+    <tr><td><input type="text" placeholder="e-mail" name="email"></td></tr>
+        <tr><td><input type="text" placeholder="ad" name="ad"></td></tr>
+        <tr><td><input type="text" placeholder="soyad" name="soyad"></td></tr>
 
   </table><br>
-  <button type="submit" name="btn_giris" class="btn btn-block btn-primary " onClick="location='/k'" > GİRİŞ YAP</button>
+  <button name="btn_giris" class="btn btn-block btn-primary "  >BİLET AL</button>
+
+
 </form>
-<table>
-    <form action="" method="post"></form>
-    <tr>
- <td><button class="submit" value="09:00" name="saat">09:00</button></td>
-<td><button class="button">10:00</button></td>
-<td><button class="button">11:00</button></td>
-<td><button class="button">12:00</button></td>
-<td><button class="button">13:00</button></td>
-<td><button class="button">14:00</button></td>
-<td><button class="button">15:00</button></td>
-<td><button class="button">16:00</button></td>
-</tr></table>
-</table>
+<form action="" method="get">
+        @csrf
+<button id="hide" >Pencereyi Kapat</button></form>
+</dialog>
 
+</body>
+</center>
 
-<button id="hide">Pencereyi Kapat</button>
-</dialog></form>
-<br>
+ 
+<center>
 <table>
     <tr><td>
         <table>
@@ -130,7 +131,7 @@
                 <p>{{$fil->yapimci}}</p>
                 <p>Senarist Yiğit Güralp</p>
                 <p>Oyuncular: İsmail Hacıoğlu, Çetin Tekindor, Kim Seol</p>
-                <button id="{{$key}}">İçeriği Göster</button>
+                <button id="{{$key}}"  href="{{url('filmadi',$fil->id)}}">İçeriği Göster</button>
             </div></td>
         </tr>
         @endforeach
@@ -141,7 +142,7 @@
 
 </body>
 
-
+<script src=""></script>
 <script type="text/JavaScript">
 (function() {
     var dialog = document.getElementById('koltuksec');
@@ -180,17 +181,12 @@
         dialog.close();
     };
    
-   
-    function myFunction() {
-    document.getElementById("k")
-    this.style.background="red 5px";// tıklanan butonun zemin rengini kırmızı yap
-            this.style.border="red 5px solid";
-}
 var a1=document.querySelector("#a1");
 
     a1.onclick=function(){
             this.style.background="red 5px";// tıklanan butonun zemin rengini kırmızı yap
             this.style.border="red 5px solid";
+
              
                 }
     var a2=document.querySelector("#a2");
