@@ -19,8 +19,29 @@
     <li><a href="/cikis">Çıkış</a></li> 
     </ul>
 </div>
+ <div>
+    <table class="ttasarım">
+        <thead>
+        <tr>
+            <th>Salon</th>
+            <th>Koltuk</th>
+            <th>Saat</th>
+            <th>Ücret</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach($biletler as $key => $item)
+            <tr>                   
+                <td>{{$item['salon']}}</td>
+                <td>{{$item['koltuk']}}</td>
+                <td>{{$item['saat']}}</td>
+                <td>{{$item['ucret']}}</td>
+            </tr>
+        @endforeach
+        </tbody>
+    </tale>
 
-
+ </div>
     
 </body>
 </html>

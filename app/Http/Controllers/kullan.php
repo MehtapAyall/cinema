@@ -60,13 +60,9 @@ class kullan extends Controller
     }
     public function koltuk (Request $req)
     {
-      
-      
-     
       return back();
-
-
     }
+
     public function goster()
     {
        $film=DB::table('films')->get();            
@@ -168,5 +164,10 @@ class kullan extends Controller
         }
         
         return redirect('filmekle');
+    }
+
+    public function sergile(){
+        $biletler = bilet::all();
+        return view('biletler', ['biletler' => $biletler]);
     }
 }

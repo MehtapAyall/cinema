@@ -52,3 +52,5 @@ Route::get('delete/{id}','App\Http\Controllers\kullan@filmadi');
 Route::get('/filmsil','App\Http\Controllers\kullan@filmsilb');
 Route::get('filmekle','App\Http\Controllers\kullan@ekle');
 Route::post('filmekle','App\Http\Controllers\kullan@ekle_post');
+
+Route::get('/biletler',[App\Http\Controllers\kullan::class,'sergile'])->name('sergile');
