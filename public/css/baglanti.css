@@ -19,8 +19,8 @@
 
 .btn_giris {
   display: inline-block;
-  padding: 15px 25px;
-  font-size: 20px;
+  padding: 10px 20px;
+  font-size: 15px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -38,6 +38,21 @@
   background-color: #fc0abb;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+input {
+  height: 35px; width: 300px;
+  padding:8px 20px;
+  border: 1px solid #eee;
+  border-left: 3px solid;
+  border-left-color:#fc0abb;
+  border-radius: 5px;
+  transition: border-color .8s ease-out;
+}
+
+input:focus{
+  outline:none;
+  border: 1px solid #eee;
+  border-left: 3px solid purple;
 }
 
 .tablo{

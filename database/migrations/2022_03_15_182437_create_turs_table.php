@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('turs', function (Blueprint $table) {
             $table->string('filmid');
             $table->string('tur');
+            $table->timestamps();
         });
     }
 

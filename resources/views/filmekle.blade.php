@@ -19,10 +19,29 @@
     </ul>
 </div>
 
-<div>
-    <form action='/danisanekle' method='post'>
+<div><center><br><br><br>
+    <form action='/filmekle' method='post' enctype="multipart/form-data">
     {{ csrf_field() }}
-    </form>
+    <table >
+        <tr><td>Afiş:</td>  <td><input type="file" name="image" required class="course form-control" style="width: 200px;"> </td>
+    <td rowspan="5">
+    <h3> Film Türü </h3>
+    <input type="checkbox" name="secim1" style="width:100px;"> Aksiyon <br>
+    <input type="checkbox" name="secim2" style="width:100px;"> Animasyon  <br>
+    <input type="checkbox" name="secim3" style="width:100px;"> Belgesel <br>
+    <input type="checkbox" name="secim4" style="width:100px;"> Bilimkurgu <br>
+    <input type="checkbox" name="secim5" style="width:100px;"> Fantastik  <br>
+    <input type="checkbox" name="secim6" style="width:100px;"> Gerilim  <br>
+    <input type="checkbox" name="secim7" style="width:100px;"> Komedi  <br>
+    <input type="checkbox" name="secim8" style="width:100px;"> Korku  <br>
+    </td></tr>
+        <tr> <td>Film Adı:</td>  <td><input type="text" name="fadi"> </td></tr>
+        <tr><td>Yapımcı:</td>  <td><input type="text" name="yapimci"> </td></tr>
+        <tr><td>Yayın Tarihi:</td>  <td><input type="text" name="tarih"> </td></tr>
+        <tr><td>Saat:</td>  <td><input type="text" name="saat"> </td></tr>
+        <tr><td></td><td><button name="ekle">Ekle</button></td></tr>
+    </table>
+    </form></center>
 </div>
     
 </body>

@@ -123,9 +123,7 @@
     <tr><td>
         <table>
         @foreach($film as $key => $fil)
-            <tr><th>filmler</th><th>saatler</th></tr>
-    
-            <tr><td name="film[]"><img src="{{$fil->resim}}" height="300px" width="200px"></td><td>
+            <tr><td name="film[]"><img src="public/{{$fil->image}}" height="300px" width="200px"></td><td>
            <div class="bilgi">
                 <h4>{{$fil->filmadi}}</h4>
                 <h4>{{$fil->saat}}</h4>
