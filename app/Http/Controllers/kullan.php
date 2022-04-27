@@ -39,6 +39,7 @@ class kullan extends Controller
     }
     public function alma (Request $req)
     {
+      
       $kullani = new musteri();
       $kullani->ad=$req->ad;
       $kullani->soyad=$req->soyad;
@@ -48,25 +49,37 @@ class kullan extends Controller
       $kullani->salon=$req->salon;
       $kullani->koltuk=$req->koltuk;
       $kullani->saat=$req->saat;
-      $kullani->save(); 
+      $kullani->save();
 
       $bilet= new bilet();
       $bilet->salon=$req->salon;
       $bilet->koltuk=$req->koltuk;
       $bilet->saat=$req->saat;
-      $bilet->ucret=
+      $bilet->ucret=$req->ucret;
+      $bilet->save();
+    
+     
+      
+      
       return back();
 
     }
-    public function koltuk (Request $req)
+    public function bilet ($id)
     {
-      return back();
+          
+        $biletid=DB::table('bilets')->where('id','=',$id)->get();
+        $kullani->biletid=$biletid;
+        $kullani->save();
+
+      
     }
+   
 
     public function goster()
     {
-       $film=DB::table('films')->get();            
-       return view('koltuk',['film'=> $film]);
+       $film=DB::table('films')->get(); 
+       $biletler=DB::table('bilets')->get();           
+       return view('koltuk',['film'=> $film],['biletler'=>$biletler]);
     }
     public function filmadi($id)
     {

@@ -106,7 +106,8 @@
         <tr><td><input type="text" placeholder="soyad" name="soyad"></td></tr>
 
   </table><br>
-  <button name="btn_giris" class="btn btn-block btn-primary "  >BİLET AL</button>
+  
+  <a href="bilet/{{$bilet->biletid}}"><button name="btn_giris" class="btn btn-block btn-primary "  >BİLET AL</button></a>
 
 
 </form>

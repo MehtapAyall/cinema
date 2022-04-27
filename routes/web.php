@@ -48,6 +48,7 @@ Route::post('/k','App\Http\Controllers\kullan@alma')->name('musteri');
 Route::get('/k','App\Http\Controllers\kullan@goster')->name('goster');
 
 Route::get('delete/{id}','App\Http\Controllers\kullan@filmadi');
+Route::get('bilet/{id}','App\Http\Controllers\kullan@bilet');
 
 Route::get('/filmsil','App\Http\Controllers\kullan@filmsilb');
 Route::get('filmekle','App\Http\Controllers\kullan@ekle');
