@@ -117,16 +117,11 @@
 
 <button id="hide">Pencereyi Kapat</button>
 </dialog></form>
-</center>
-
- 
-<center>
+<br>
 <table>
     <tr><td>
         <table>
         @foreach($film as $key => $fil)
-            <tr><th> filmler</th><th>saatler</th></tr>
-    
             <tr><td name="film[]"><img src="public/{{$fil->image}}" height="300px" width="200px"></td><td>
            <div class="bilgi">
                 <h4>{{$fil->filmadi}}</h4>
