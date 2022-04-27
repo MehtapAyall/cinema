@@ -1,25 +1,25 @@
 
-.button {
+button {
   display: inline-block;
-  padding: 15px 25px;
-  font-size: 20px;
+  padding: 10px 20px;
+  font-size: 15px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color:#f4511e;
+  background-color:#fc0abb;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
 }
 
-.button:hover {
-  background-color: #3e8e41}
+button:hover {
+  background-color: purple}
 
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
+button:active {
+  background-color: purple;
+  box-shadow: 0 1px #666;
   transform: translateY(4px);
 }
 .but{
@@ -95,8 +95,10 @@ td.tab2{
   color: white;
 }
 .img:hover{
-border: 2px solid#3e8e41;
-
+border: 2px solid #3e8e41;
+}
+td{
+  color: white;
 }
 .img:active{
   border: #b43105 solid 2px;

@@ -17,8 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('filmadi');
             $table->string('yapimci')->unique();
-            $table->timestamp('yayinTarihi')->nullable();
+            $table->date('yayinTarihi')->nullable();
             $table->string('saat');
+            $table->string('image');
+            $table->timestamps();
             $table->rememberToken();
         });
     }
