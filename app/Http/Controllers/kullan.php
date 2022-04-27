@@ -49,7 +49,12 @@ class kullan extends Controller
       $kullani->koltuk=$req->koltuk;
       $kullani->saat=$req->saat;
       $kullani->save(); 
-      
+
+      $bilet= new bilet();
+      $bilet->salon=$req->salon;
+      $bilet->koltuk=$req->koltuk;
+      $bilet->saat=$req->saat;
+      $bilet->ucret=
       return back();
 
     }
@@ -72,10 +77,15 @@ class kullan extends Controller
         /*$filmadi=film::where('id','=',$id)->get('filmadi');
         $data=film::find($id);
         return view('koltuk',$filmadi);*/
-        $data = ['filmid'=>film::where('id','=', $id)->first()];
        
+        DB::delete('delete from films where id = ?',[$id]);
+        return back();
         
-        return view('koltuk', $data);
+        }
+    public function filmsilb()
+    {
+       $film=DB::table('films')->get();            
+       return view('filmsil',['data'=> $film]);
     }
 
     public function ekle()

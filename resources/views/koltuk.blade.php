@@ -18,6 +18,7 @@
     <li><a href="/k">Ana Sayfa</a></li>
     <li><a href="/biletler">Biletler</a></li>
     <li><a href="/filmekle">Film Ekle</a></li>
+    <li><a href="/filmsil">Film Sil</a></li>
     <li><a href="/cikis">Çıkış</a></li> 
     </ul>
 </div>
@@ -91,10 +92,10 @@
 
     <table>
     
-   @isset($filmid)
+   
          
          <tr><td><input type="text" placeholder="filmadı" name="filmid" value="" ></td></tr>
-         @endisset
+        
     <tr> <td> <input  placeholder=" salon no"  type="text" name="salon" value=""> </td></tr>
    
     <tr> <th> <input placeholder="saat"  type="text" name="saat" value=""> </th></tr>

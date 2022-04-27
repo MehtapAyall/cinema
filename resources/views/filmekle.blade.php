@@ -15,6 +15,7 @@
     <li><a href="/k">Ana Sayfa</a></li>
     <li><a href="/biletler">Biletler</a></li>
     <li><a href="/filmekle">Film Ekle</a></li>
+    <li><a href="/filmsil">Film Sil</a></li>
     <li><a href="/cikis">Çıkış</a></li> 
     </ul>
 </div>

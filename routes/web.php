@@ -39,10 +39,16 @@ Route::get('/biletler', function()
 {
   return view('biletler');
 });
+Route::get('/filmsil', function()
+{
+  return view('filmsil');
+});
 Route::post('/giris','App\Http\Controllers\kullan@kontrol')->name('kayitkontrol');
 Route::post('/k','App\Http\Controllers\kullan@alma')->name('musteri');
 Route::get('/k','App\Http\Controllers\kullan@goster')->name('goster');
-Route::get('/filmadi/{id}',[App\Http\Controllers\kullan::class,'filmadi']);
 
+Route::get('delete/{id}','App\Http\Controllers\kullan@filmadi');
+
+Route::get('/filmsil','App\Http\Controllers\kullan@filmsilb');
 Route::get('filmekle','App\Http\Controllers\kullan@ekle');
 Route::post('filmekle','App\Http\Controllers\kullan@ekle_post');
