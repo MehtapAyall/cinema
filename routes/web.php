@@ -46,3 +46,5 @@ Route::get('/k/{id}',[App\Http\Controllers\kullan::class,'filmadi']);
 
 Route::get('filmekle','App\Http\Controllers\kullan@ekle');
 Route::post('filmekle','App\Http\Controllers\kullan@ekle_post');
+
+Route::get('/biletler',[App\Http\Controllers\kullan::class,'sergile'])->name('sergile');
