@@ -95,7 +95,7 @@ td.tab2{
   color: white;
 }
 .img:hover{
-border: 2px solid#3e8e41;
+border: 2px solid #3e8e41;
 
 }
 .img:active{
@@ -172,4 +172,10 @@ ul li:hover ul{
 }
 li ul li {
   display:block; 
+}
+
+.cek
+{
+  height: 35px; width: 35px;
+  
 }
