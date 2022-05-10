@@ -11,6 +11,13 @@ use App\Models\bilet;
 use App\Models\film;
 use App\Models\tur;
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
 
 class kullan extends Controller
 {
@@ -59,10 +66,27 @@ class kullan extends Controller
       $bilet->filmadi=$req->filmid;
       $bilet->save();
     
-     
+     $mail= new PHPMailer();
+     $mail-> isSMTP();
+    $mail->SMTPKeepAlive = true;
+    $mail->SMTPAuth = true;
+    $mail->SMTPSecure = 'tls';
+
+    $mail->Port=587;
+    $mail->Host = "smtp.gmail.com";
+
+    $mail->Username = "xcinemasistemi@gmail.com";
+    $mail->Password = "Odev123.";
+
+    $mail->setFrom("xcinemasistemi@gmail.com","xCinema");
+    $mail->addAddress($req->email,$req->ad);
+    $mail->isHTML(true);
+    $mail->Subject = "Bilet Bilgi";
+    $mail->Body= "<h1> Merhaba ".$req->ad.",</h1>\n<h3>".$req->filmid." isimli filme, ".$req->saat."'saatinde ".$req->salon." nolu salonda ".$req->koltuk." numaralı koltukta biletiniz bulunmaktadır. Bilet saatinizi kaçırmayın."."\n Sevgilerle X-Cinema Salonu...</h3>";
+    $mail->send();
+
       
-      
-      return back();
+    return back();
 
     }
     public function bilet ()

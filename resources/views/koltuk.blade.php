@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Filmler</title>
 </head>
 
 </html><link rel="stylesheet" href="{{ asset('css/a.css') }}" type="text/css">
@@ -106,7 +106,8 @@
         <tr><td><input type="text" placeholder="soyad" name="soyad"></td></tr>
 
   </table><br>
-   <button name="btn_giris" class="btn btn-block btn-primary "  >BİLET AL</button>
+  
+  <button name="btn_giris" class="btn btn-block btn-primary "  >BİLET AL</button>
 
 
 </form>
