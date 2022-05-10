@@ -106,11 +106,11 @@
         <tr><td><input type="text" placeholder="soyad" name="soyad"></td></tr>
 
   </table><br>
-  
-  <a href="bilet/{{$bilet->biletid}}"><button name="btn_giris" class="btn btn-block btn-primary "  >BİLET AL</button></a>
+   <button name="btn_giris" class="btn btn-block btn-primary "  >BİLET AL</button>
 
 
 </form>
+
 <form action="" method="get">
         @csrf
 <button id="hide" >Pencereyi Kapat</button></form>
@@ -138,7 +138,9 @@
         </tr>
         @endforeach
         
-
+        <tr><form action="{{route('bilet')}}" method="get">
+@csrf        
+<button type="submit">GÜNCELLE</button></form></tr>
                 </table>
 </table>
 

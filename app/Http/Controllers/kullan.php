@@ -44,7 +44,7 @@ class kullan extends Controller
       $kullani->ad=$req->ad;
       $kullani->soyad=$req->soyad;
       $kullani->email=$req->email;
-      $kullani->filmid=$req->filmid;
+      $kullani->filmadi=$req->filmid;
       $kullani->biletid=$req->biletid;     
       $kullani->salon=$req->salon;
       $kullani->koltuk=$req->koltuk;
@@ -56,6 +56,7 @@ class kullan extends Controller
       $bilet->koltuk=$req->koltuk;
       $bilet->saat=$req->saat;
       $bilet->ucret=$req->ucret;
+      $bilet->filmadi=$req->filmid;
       $bilet->save();
     
      
@@ -64,16 +65,29 @@ class kullan extends Controller
       return back();
 
     }
-    public function bilet ($id)
+    public function bilet ()
     {
+        $biletler = bilet::all();
+        DB::transaction(function(){
+        for ($i=0; $i <5 ; $i++) { 
+            $musteri=DB::table('musteris')->where('id','=',$i)->update(['biletid'=>$i]);
+
+        
+        /* 
+        foreach ($musteri as $key => $mus) {
+           $biletid=DB::select('select from musteris where koltuk= ?',[$mus])->update(
+            'update musteris set biletid= 1 where koltuk = ?',
+            [$mus]);;
+           $kullani = DB::update*/
           
-        $biletid=DB::table('bilets')->where('id','=',$id)->get();
-        $kullani->biletid=$biletid;
-        $kullani->save();
+        }
+      
+        
 
       
-    }
-   
+    });
+    return back();
+}
 
     public function goster()
     {
