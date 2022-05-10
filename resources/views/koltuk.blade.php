@@ -131,8 +131,6 @@
                 <h4>{{$fil->saat}}</h4>
                 <p>{{$fil->yayinTarihi}}</p>
                 <p>{{$fil->yapimci}}</p>
-                <p>Senarist Yiğit Güralp</p>
-                <p>Oyuncular: İsmail Hacıoğlu, Çetin Tekindor, Kim Seol</p>
                 <button id="{{$key}}"  href="{{url('filmadi',$fil->id)}}">İçeriği Göster</button>
             </div></td>
         </tr>
