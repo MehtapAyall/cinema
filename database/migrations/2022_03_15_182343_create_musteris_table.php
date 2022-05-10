@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('ad');
             $table->string('soyad');
             $table->string('email');
-            $table->string('filmid');
+            $table->string('filmadi');
             $table->string('biletid')-> nullable();
             $table->string('salon') -> nullable();
             $table->string('koltuk') -> nullable();

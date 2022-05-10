@@ -111,6 +111,7 @@
 
 
 </form>
+
 <form action="" method="get">
         @csrf
 <button id="hide" >Pencereyi Kapat</button></form>
@@ -136,7 +137,9 @@
         </tr>
         @endforeach
         
-
+        <tr><form action="{{route('bilet')}}" method="get">
+@csrf        
+<button type="submit">GÜNCELLE</button></form></tr>
                 </table>
 </table>
 
